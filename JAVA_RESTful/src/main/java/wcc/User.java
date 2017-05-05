@@ -14,16 +14,26 @@ public class User {
     private int age;
     @JSONField(format = "yyyy-MM-dd")
     private Date birthday;
+    private String state;
 
     public User() {
     }
 
-    public User(String username, String password, String name, int age, Date birthday) {
+    public User(String username, String password, String name, int age, Date birthday, String state) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.age = age;
         this.birthday = birthday;
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getUsername() {

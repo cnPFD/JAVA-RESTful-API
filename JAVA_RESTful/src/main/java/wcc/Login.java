@@ -25,7 +25,7 @@ public class Login {
         Date date = smt.parse(birthday);
         Status s = new Status();
         s.setStatus(200);
-        User user = new User(username,password,name,Integer.parseInt(age),date);
+        User user = new User(username,password,name,Integer.parseInt(age),date,"恭喜注册成功");
         System.out.println(user.getBirthday());
         s.addUser(user);
         String jsonStr = JSON.toJSONString(s);
@@ -43,7 +43,43 @@ public class Login {
         Date date = smt.parse(birthday);
         Status s = new Status();
         s.setStatus(200);
-        User user = new User(username,password,name,Integer.parseInt(age),date);
+        User user = new User(username,password,name,Integer.parseInt(age),date,"恭喜注册成功");
+        System.out.println(user.getBirthday());
+        s.addUser(user);
+        String jsonStr = JSON.toJSONString(s);
+        return jsonStr;
+    }
+    @PUT
+    @Path("login")
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces("application/json")
+    public String putLogin(@FormParam("username") String username,
+                            @FormParam("password") String password,
+                            @FormParam("name") String name,
+                            @FormParam("age") String age,
+                            @FormParam("birthday") String birthday) throws ParseException {
+        Date date = smt.parse(birthday);
+        Status s = new Status();
+        s.setStatus(200);
+        User user = new User(username,password,name,Integer.parseInt(age),date,"恭喜注册成功");
+        System.out.println(user.getBirthday());
+        s.addUser(user);
+        String jsonStr = JSON.toJSONString(s);
+        return jsonStr;
+    }
+    @DELETE
+    @Path("login")
+    @Consumes("application/x-www-form-urlencoded")
+    @Produces("application/json")
+    public String deleteLogin(@FormParam("username") String username,
+                            @FormParam("password") String password,
+                            @FormParam("name") String name,
+                            @FormParam("age") String age,
+                            @FormParam("birthday") String birthday) throws ParseException {
+        Date date = smt.parse(birthday);
+        Status s = new Status();
+        s.setStatus(200);
+        User user = new User(username,password,name,Integer.parseInt(age),date,"恭喜注册成功");
         System.out.println(user.getBirthday());
         s.addUser(user);
         String jsonStr = JSON.toJSONString(s);
