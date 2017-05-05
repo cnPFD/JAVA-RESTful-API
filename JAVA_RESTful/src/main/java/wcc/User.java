@@ -1,5 +1,7 @@
 package wcc;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 /**
@@ -10,6 +12,7 @@ public class User {
     private String password;
     private String name;
     private int age;
+    @JSONField(format = "yyyy-MM-dd")
     private Date birthday;
 
     public User() {
