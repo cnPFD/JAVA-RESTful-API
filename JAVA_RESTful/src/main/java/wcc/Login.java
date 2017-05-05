@@ -11,11 +11,10 @@ import java.util.Date;
 /**
  * Created by soft01 on 2017/5/4.
  */
-@Path("wcc")
+@Path("wcc/login")
 public class Login {
     SimpleDateFormat smt = new SimpleDateFormat("yy-MM-dd");
     @GET
-    @Path("login")
     @Produces("application/json")
     public String getsearch(@QueryParam("username") String username,
                             @QueryParam("password") String password,
@@ -32,7 +31,6 @@ public class Login {
         return jsonStr;
     }
     @POST
-    @Path("login")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public String postLogin(@FormParam("username") String username,
@@ -50,7 +48,6 @@ public class Login {
         return jsonStr;
     }
     @PUT
-    @Path("login")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public String putLogin(@FormParam("username") String username,
@@ -68,7 +65,6 @@ public class Login {
         return jsonStr;
     }
     @DELETE
-    @Path("login")
     @Consumes("application/x-www-form-urlencoded")
     @Produces("application/json")
     public String deleteLogin(@FormParam("username") String username,
