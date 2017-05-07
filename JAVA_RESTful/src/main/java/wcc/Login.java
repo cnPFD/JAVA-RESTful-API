@@ -13,6 +13,7 @@ import java.util.Date;
  */
 @Path("wcc/login")
 public class Login {
+    Status s = new Status();
     SimpleDateFormat smt = new SimpleDateFormat("yy-MM-dd");
     @GET
     @Produces("application/json")
