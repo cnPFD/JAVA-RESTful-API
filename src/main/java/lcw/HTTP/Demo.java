@@ -1,7 +1,6 @@
-package lcw;
+package lcw.HTTP;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.annotation.JSONField;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -19,7 +18,8 @@ public class Demo {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public String getDate_post(@QueryParam("name") String name, @QueryParam("birthday") String s,
-                          @QueryParam("username") String username,@QueryParam("age") int age) {
+                               @QueryParam("username") String username,@QueryParam("age") int age
+                               ) {
 
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
         Date birthday = null;

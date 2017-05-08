@@ -1,4 +1,4 @@
-package lcw;
+package lcw.HTTP;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
@@ -7,13 +7,13 @@ import java.util.Date;
 /**
  * Created by soft01 on 2017/5/5.
  */
+
 public class User {
     private String username;
     private String name;
     private int age;
     @JSONField(format = "yyyy-MM-dd")
     private Date birthday;
-
 
     public User(String username, String name, int age, Date birthday) {
         this.username = username;
@@ -23,11 +23,14 @@ public class User {
     }
 
     public User() {
-
     }
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
@@ -42,6 +45,10 @@ public class User {
         return username;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getAge() {
         return age;
     }
@@ -49,14 +56,4 @@ public class User {
     public Date getBirthday() {
         return birthday;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
 }

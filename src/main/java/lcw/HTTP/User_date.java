@@ -1,4 +1,4 @@
-package lcw;
+package lcw.HTTP;
 
 import java.util.List;
 
