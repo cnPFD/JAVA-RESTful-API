@@ -1,4 +1,4 @@
-package wcc;
+package wcc.wcc170505;
 
 import com.alibaba.fastjson.annotation.JSONField;
 

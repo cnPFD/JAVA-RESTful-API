@@ -1,9 +1,8 @@
-package wcc;
+package wcc.wcc170505;
 
 import com.alibaba.fastjson.JSON;
 
 import javax.ws.rs.*;
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,6 +12,7 @@ import java.util.Date;
  */
 @Path("wcc/login")
 public class Login {
+    Status s = new Status();
     SimpleDateFormat smt = new SimpleDateFormat("yy-MM-dd");
     @GET
     @Produces("application/json")
