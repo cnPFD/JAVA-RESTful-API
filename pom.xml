@@ -23,6 +23,14 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
     <dependencyManagement>
@@ -55,8 +63,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.31</version>
         </dependency>
-<<<<<<< HEAD
-=======
+
         <!--<dependency>-->
             <!--<groupId>commons-dbcp</groupId>-->
             <!--<artifactId>commons-dbcp</artifactId>-->
@@ -67,7 +74,7 @@
             <!--<artifactId>mysql-connector-java</artifactId>-->
             <!--<version>5.1.37</version>-->
         <!--</dependency>-->
->>>>>>> a0bc85c214028d5e65835f787a8ff93f1e1b7e9a
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -77,6 +84,11 @@
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
             <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.4</version>
         </dependency>
     </dependencies>
 
