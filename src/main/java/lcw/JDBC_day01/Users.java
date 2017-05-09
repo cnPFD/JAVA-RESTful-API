@@ -1,16 +1,10 @@
 package lcw.JDBC_day01;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
-import java.util.Date;
 import java.util.UUID;
 
 /**
  * Created by soft01 on 2017/5/8.
  */
-    /**
-     * Created by soft01 on 2017/5/5.
-     */
     public class Users {
         private String name;
         private String idcardnum;
@@ -21,10 +15,6 @@ import java.util.UUID;
         private String sign;
         private String headpicture;
         private String uuid;
-
-//      private int age;
-//      private int phone;
-
 
 
         public Users(String name, String idcardnum, String account, String password, String username, String gender, String sign, String headpicture) {
@@ -74,8 +64,8 @@ import java.util.UUID;
             return username;
         }
 
-        public String getGender(String gender) {
-            return this.gender;
+        public String getGender() {
+            return gender;
         }
 
         public String getSign() {
@@ -123,6 +113,6 @@ import java.util.UUID;
         }
 
         public void setUuid(String uuid) {
-            this.uuid = uuid;
+            this.uuid = UUID.randomUUID().toString();
         }
     }
