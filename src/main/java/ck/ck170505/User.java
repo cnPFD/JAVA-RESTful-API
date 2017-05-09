@@ -1,4 +1,4 @@
-package ck;
+package ck.ck170505;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
