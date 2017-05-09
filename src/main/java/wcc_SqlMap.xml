@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MyBatis.UserInter">
+    <select id="showusermsg" resultType="MyBatis.User">
+       SELECT  * from usersmsg where idcardnum = #{idcardnum};
+    </select>
+    <insert id="insertuser" parameterType="MyBatis.User">
+        insert into usersmsg values (#{id},#{name},#{idcardnum},#{account},#{password},#{username},#{gender},#{sign},#{headpicture});
+    </insert>
+    <delete id="deleteuser" parameterType="String">
+        delete from usersmsg where idcardnum = #{idcardnum};
+    </delete>
+    <update id="updateuser" parameterType="MyBatis.User">
+        update usersmsg set name = #{name},account = #{account},password = #{password},username = #{username},gender = #{gender},sign = #{sign},headpicture = #{headpicture} where idcardnum = #{idcardnum};
+    </update>
+</mapper>
