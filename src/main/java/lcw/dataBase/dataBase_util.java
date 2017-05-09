@@ -16,7 +16,7 @@ public class dataBase_util {
     //    private static Reader reader;
     static {
         try {
-            String resource = "mybatis-config.xml";
+            String resource = "LCW_mybatis-config.xml";
             InputStream inputStream = Resources.getResourceAsStream(resource);
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         } catch (IOException e) {
